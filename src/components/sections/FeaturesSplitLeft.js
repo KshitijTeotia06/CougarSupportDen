@@ -62,33 +62,33 @@ const FeaturesSplit = ({
     >
       <div className="container">
         <div className={innerClasses}>
-          <div className={splitClasses}>
-          <div className="split-item">
-              <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
-                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-                  {caption}
-                  </div>
-                <h3 className="mt-0 mb-12">
-                  {title}
-                  </h3>
-                <p className="m-0">
-                  {description}
-                  </p>
-              </div>
-              <div className={
-                classNames(
-                  'split-item-image center-content-mobile reveal-from-bottom',
-                  imageFill && 'split-item-image-fill'
-                )}
-                data-reveal-container=".split-item">
-                <Image
-                  src={imageUrl}
-                  alt="Features split 01"
-                  width={528}
-                  height={396} />
-              </div>
+            <div className={splitClasses}>
+                <div className="split-item">
+                    <div className={
+                        classNames(
+                        'split-item-image center-content-mobile reveal-from-bottom',
+                        imageFill && 'split-item-image-fill'
+                        )}
+                        data-reveal-container=".split-item">
+                        <Image
+                        src={imageUrl}
+                        alt="Features split 01"
+                        width={528}
+                        height={396} />
+                    </div>
+                    <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item" style = {{marginLeft:"30px"}}>
+                        <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                        {caption}
+                        </div>
+                        <h3 className="mt-0 mb-12">
+                        {title}
+                        </h3>
+                        <p className="m-0">
+                        {description}
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
       </div>
     </section>

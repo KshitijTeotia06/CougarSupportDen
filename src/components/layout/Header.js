@@ -112,7 +112,19 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="about" onClick={closeMenu}>About Us</Link>
+                    </li>
+                    <li>
+                      <Link to="peer" onClick={closeMenu}>Peer Counseling</Link>
+                    </li>
+                    <li>
+                      <Link to="staff" onClick={closeMenu}>Staff</Link>
+                    </li>
+                    <li>
+                      <Link to="alumni" onClick={closeMenu}>Alumni</Link>
+                    </li>
+                    <li>
+                      <Link to="sea" onClick={closeMenu}>SEA</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -120,7 +132,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Join Us</Link>
                       </li>
                     </ul>}
                 </div>
