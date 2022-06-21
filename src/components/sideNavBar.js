@@ -1,38 +1,28 @@
 import React from 'react'
 import './sideNavBar.css'
 
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+export default function sideNavBar(props) {
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
+  const sideTitles = props.sideTitles;
 
-export default function sideNavBar() {
+
+  
+
+  
   return (
     <div className="sidenav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#contact">Contact</a>
-        <button className="dropdown-btn">Dropdown
-            <i className="fa fa-caret-down"></i>
-        </button>
-        <div className="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-        </div>
-        <a href="#contact">Search</a>
+        {/* <a href="#about">What is SEA?</a>
+        <a href="#about"  style = {{color: "#1CB68B"}}>Guides</a>
+        <a href="#about"> &emsp; Family</a>
+        <a href="#about"> &emsp; Identify</a> */}
+
+        {
+          sideTitles.map((titl) => (
+              <a key = {titl.key} href = "#about" style = {{color: titl.isbold && "#1CB68B", marginLeft: titl.tab && "20px"}}>
+                {/* {titl.tab ? ("\u00a0 \u00a0 \u00a0") : ("")} */}
+                {titl.text}</a>
+          ))
+        }
     </div>
   )
 }

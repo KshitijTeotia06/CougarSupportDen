@@ -1,9 +1,9 @@
 /* Fixed sidenav, full height */
 .sidenav {
-    width: 200px;
-    position: fixed;
+    width: 300px;
     overflow-x: hidden;
     padding-top: 20px;
+    border-right: 1px solid #818181;
   }
   
   /* Style the sidenav links and the dropdown button */

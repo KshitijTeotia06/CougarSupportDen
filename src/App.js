@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 
+import db from "./Firebase";
 // Layouts
 import LayoutDefault from './layouts/LayoutDefault';
 
@@ -14,6 +15,8 @@ import Peer from "./views/Peer"
 import Staff from "./views/Staff"
 import SEA from "./views/SEA"
 import Alumni from "./views/Alumni"
+import { collection, onSnapshot } from 'firebase/firestore';
+
 
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
@@ -36,7 +39,18 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
+  // const [seaTitles, setSEATitles] = useState([]);
+
+  // useEffect (() => {
+  //   onSnapshot(collection(db, "SEA"), (snapshot) => {
+  //     setSEATitles(snapshot.docs.map(doc => doc.data()));
+  //   });
+  // });
+  // console.log(seaTitles);
+
   return (
+      
+
     <ScrollReveal
       ref={childRef}
       children={() => (
