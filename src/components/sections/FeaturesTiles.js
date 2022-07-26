@@ -44,8 +44,8 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Build up the whole picture',
-    paragraph: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum — semper quis lectus nulla at volutpat diam ut venenatis.'
+    title: 'Meet Our Teams',
+    paragraph: 'Learn more about our teams'
   };
 
   return (
@@ -61,7 +61,7 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style = {{backgroundColor: "#f2a1ce"}}>
                     <Image
                       src={require('./../../assets/images/feature-tile-icon-01.svg')}
                       alt="Features tile icon 01"
@@ -70,10 +70,10 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  <h4 className="mt-0 mb-8" style = {{color: "#f2a1ce"}}>
+                     Graphic Design
                     </h4>
-                  <p className="m-0 text-sm">
+                  <p className="m-0 text-sm" style = {{color: "#af2974"}}>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                     </p>
                 </div>
@@ -83,7 +83,7 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style = {{backgroundColor: "#f7ba78"}}>
                     <Image
                       src={require('./../../assets/images/feature-tile-icon-02.svg')}
                       alt="Features tile icon 02"
@@ -92,10 +92,10 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  <h4 className="mt-0 mb-8" style = {{color: "#f7ba78"}}>
+                    Programming
                     </h4>
-                  <p className="m-0 text-sm">
+                  <p className="m-0 text-sm" style = {{color: "#be6607"}}>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                     </p>
                 </div>
@@ -105,7 +105,7 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16"  style = {{backgroundColor: "#f9db71"}}>
                     <Image
                       src={require('./../../assets/images/feature-tile-icon-03.svg')}
                       alt="Features tile icon 03"
@@ -114,10 +114,10 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  <h4 className="mt-0 mb-8" style = {{color: "#f9db71"}}>
+                    Connections
                     </h4>
-                  <p className="m-0 text-sm">
+                  <p className="m-0 text-sm" style = {{color: "#bc9112"}}>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                     </p>
                 </div>
@@ -127,7 +127,7 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style = {{backgroundColor: "#aaf2a1"}}>
                     <Image
                       src={require('./../../assets/images/feature-tile-icon-04.svg')}
                       alt="Features tile icon 04"
@@ -136,10 +136,10 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  <h4 className="mt-0 mb-8" style = {{color: "#aaf2a1"}}>
+                    Peer Counseling
                     </h4>
-                  <p className="m-0 text-sm">
+                  <p className="m-0 text-sm" style = {{color: "#5f9731"}}>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                     </p>
                 </div>
@@ -149,7 +149,7 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style = {{backgroundColor: "#a1ddf2"}}>
                     <Image
                       src={require('./../../assets/images/feature-tile-icon-05.svg')}
                       alt="Features tile icon 05"
@@ -158,10 +158,10 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  <h4 className="mt-0 mb-8" style = {{color: "#a1ddf2"}}>
+                    Self Educational Awareness
                     </h4>
-                  <p className="m-0 text-sm">
+                  <p className="m-0 text-sm" style = {{color: "#24899d"}}>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                     </p>
                 </div>
@@ -171,7 +171,7 @@ const FeaturesTiles = ({
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
-                  <div className="features-tiles-item-image mb-16">
+                  <div className="features-tiles-item-image mb-16" style = {{backgroundColor: "#c4a1f2"}}>
                     <Image
                       src={require('./../../assets/images/feature-tile-icon-06.svg')}
                       alt="Features tile icon 06"
@@ -180,10 +180,10 @@ const FeaturesTiles = ({
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
-                  <h4 className="mt-0 mb-8">
-                    Robust Workflow
+                  <h4 className="mt-0 mb-8" style = {{color: "#c4a1f2"}}>
+                    Alumni Outreach
                     </h4>
-                  <p className="m-0 text-sm">
+                  <p className="m-0 text-sm" style = {{color: "#784c9a"}}>
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                     </p>
                 </div>

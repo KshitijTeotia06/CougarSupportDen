@@ -10,8 +10,8 @@ import SectionHeader from '../components/sections/partials/SectionHeader';
 import GenericSection from "../components/sections/GenericSection";
 import headerImage from "../assets/images/SEAImage.svg"
 import SideNavBar from "../components/sideNavBar";
-import db from "../Firebase";
-import { collection, onSnapshot } from 'firebase/firestore';
+import raw from "raw.macro";
+
 
 
 const headerData = {
@@ -32,24 +32,56 @@ const SEA = () => {
   // });
 
   // names.sort((a, b) => (a.key > b.key ? 1 : -1));
+
+  const csv2json = (str, delimiter = ',') => {
+    str = str.trim();
+    const titles = str.slice(0, str.indexOf('\n')).split(delimiter);
+    const rows = str.slice(str.indexOf('\n')).split('\n');
+    for(let i = 0; i < rows.length; i++){
+      rows[i] = rows[i].trim();
+    }
+    for(let i = 0; i < titles.length; i++){
+      titles[i] = titles[i].trim();
+    }
+
+    return rows.map(row => {
+      const values = row.split(delimiter);
+      return titles.reduce((object, curr, i) => (object[curr] = values[i], object), {})
+    });
+  };
+
   const [names, setNames] = useState(
     [
-      {text: "What is SEA?", tab: false, isbold: false, cont : (<p>Text about SEA</p>)},
-      {text: "Guides", tab: false, isbold: true,  cont : (<p>Text about Guides</p>)},
-      {text: "Family & Relationships", tab: true, isbold: false, cont : (<p>Text about Family</p>)},
-      {text: "Identity & Intersectionality", tab: true, isbold: false, cont : (<p>Text about Identify</p>)},
-      {text: "Mental Health", tab: true, isbold: false, cont : (<p>Text about Mental Health</p>)},
-      {text: "Neurodiversity", tab: true, isbold: false, cont : (<p>Text about Neurodiversity</p>)},
-      {text: "Sexual Assault + Trauma", tab: true, isbold: false, cont : (<p>Text about Sexual Assault</p>)},
-      {text: "Sexual Education", tab: true, isbold: false, cont : (<p>Text about Sexual Education</p>)}
+      {text: "What is SEA?", tab: false, isbold: false, cont : "Text about SEA"},
+      {text: "Guides", tab: false, isbold: true,  cont : "Text about Guides"},
+      {text: "Family & Relationships", tab: true, isbold: false, cont : "Text about SEA"},
+      {text: "Identity & Intersectionality", tab: true, isbold: false, cont : "Text about SEA"},
+      {text: "Mental Health", tab: true, isbold: false, cont : "Text about SEA"},
+      {text: "Neurodiversity", tab: true, isbold: false, cont : "Text about SEA"},
+      {text: "Sexual Assault + Trauma", tab: true, isbold: false, cont : "Text about SEA"},
+      {text: "Sexual Education", tab: true, isbold: false, cont : "Text about SEA"}
   ])
+
+  const { convertCSVToArray } = require('convert-csv-to-array');
+  const converter = require('convert-csv-to-array');
+  const csv = raw("../data/SEA.csv");
+  const array = csv2json(csv);
+  array.shift();
+  console.log(array);
+  // console.log(csv);
+  // const getData = convertCSVToArray(csv, {
+  //   header: false,
+  //   type: 'object',
+  //   separator: ',', // use the separator you use in your csv (e.g. '\t', ',', ';' ...)
+  // });
+  // console.log(getData)
 
   return ( 
     <>
       <FeaturesSplit bottomDivider title = "SEA" description = "Self Education Awareness" caption = "Free for everyone" className="illustration-section-01 has-bottom-divider invertMobile topDivider imageFill" imageUrl = {headerImage}/>
       <GenericSection style = {{display:"flex"}}>
         {/* <div style = {{float: "left"}}> */}
-          <SideNavBar sideTitles = {names} />
+          <SideNavBar sideTitles = {array} />
         {/* </div> */}
         {/* <div style = {{float: "left", marginLeft: "50px", marginTop: "-50px"}}>
           <h1>TEXT</h1>

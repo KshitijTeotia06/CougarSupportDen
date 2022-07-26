@@ -22,10 +22,11 @@ export default function SideNavBar(props) {
   function changeText(titl){
       setbodyText(titl.text);
       setCont(titl.cont)
+      // console.log("TEST");
   }
 
   const newTitles = sideTitles.map((titl) => (
-    <a onClick = {() => changeText(titl)} key = {titl.key} style = {{color: titl.isbold && "#1CB68B", marginLeft: titl.tab && "20px"}}>
+    <a onClick = {() => changeText(titl)} key = {titl.key} style = {{color: titl.isbold == "TRUE" && "#1CB68B", marginLeft: titl.tab == "TRUE" && "20px"}}>
       {/* {titl.tab ? ("\u00a0 \u00a0 \u00a0") : ("")} */}
       {titl.text}
       </a>
