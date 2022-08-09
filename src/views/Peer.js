@@ -13,6 +13,7 @@ import featureImage from "../assets/images/features-split-image-01.png"
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import {useState} from "react";
+import peerBan from "../assets/banners/peerBan.png";
 
 const headerData = {
     title: 'Schedule An Appointment',
@@ -28,7 +29,11 @@ const Peer = () => {
 
   return (
     <>
-      <FeaturesSplit bottomDivider title = "Peer Counseling" description = "Interact with fellow peers in order to have a good experience" caption = "Free for everyone" className="illustration-section-01 has-bottom-divider invertMobile topDivider imageFill" imageUrl = {headerImage}/>
+      <GenericSection>
+      {/* <FeaturesSplit bottomDivider title = "Peer Counseling" description = "Interact with fellow peers in order to have a good experience" caption = "Free for everyone" className="illustration-section-01 has-bottom-divider invertMobile topDivider imageFill" imageUrl = {headerImage}/> */}
+        <img src={peerBan} style = {{marginTop: "-70px", width: "80%", marginLeft: "auto", marginRight: "auto"}}alt="Logo" />
+        <div className = "has-top-divider" style = {{marginTop: "50px"}}></div>
+      </GenericSection>
       <FeaturesSplit title = "text" description = "text" caption = "Hello" invertMobile topDivider imageFill className="illustration-section-02" imageUrl = {featureImage}/>
       <FeaturesSplitLeft bottomDivider title = "text" description = "text" caption = "Hello" invertMobile topDivider imageFill className="illustration-section-02" imageUrl = {featureImage}/>
       <GenericSection>

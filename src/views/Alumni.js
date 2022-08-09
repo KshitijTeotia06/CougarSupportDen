@@ -10,6 +10,7 @@ import GenericSection from "../components/sections/GenericSection";
 import headerImage from "../assets/images/alumni.svg"
 import SideNavBar from "../components/sideNavBar";
 import Card from "../components/Card";
+import alumniBan from "../assets/banners/alumniBan.png"
 
 const headerData = {
     title: 'Section title',
@@ -36,7 +37,11 @@ const Alumni = () => {
 
   return (
     <>
-      <FeaturesSplit bottomDivider title = "Alumni" description = "Get info from past EVHS students" caption = "Past EVHS Students" invertMobile topDivider imageFill className="illustration-section-01" imageUrl = {headerImage}/>
+      <GenericSection>
+        <img src={alumniBan} style = {{marginTop: "-70px", width: "80%", marginLeft: "auto", marginRight: "auto"}}alt="Logo" />
+
+      </GenericSection>
+      {/* <FeaturesSplit bottomDivider title = "Alumni" description = "Get info from past EVHS students" caption = "Past EVHS Students" invertMobile topDivider imageFill className="illustration-section-01" imageUrl = {headerImage}/> */}
       <GenericSection style = {{display:"flex"}}>
         <SideNavBar sideTitles = {names} />
       </GenericSection>

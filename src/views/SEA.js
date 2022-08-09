@@ -11,6 +11,7 @@ import GenericSection from "../components/sections/GenericSection";
 import headerImage from "../assets/images/SEAImage.svg"
 import SideNavBar from "../components/sideNavBar";
 import raw from "raw.macro";
+import seaBan from "../assets/banners/seaBan.PNG"
 
 
 
@@ -78,7 +79,10 @@ const SEA = () => {
 
   return ( 
     <>
-      <FeaturesSplit bottomDivider title = "SEA" description = "Self Education Awareness" caption = "Free for everyone" className="illustration-section-01 has-bottom-divider invertMobile topDivider imageFill" imageUrl = {headerImage}/>
+      {/* <FeaturesSplit bottomDivider title = "SEA" description = "Self Education Awareness" caption = "Free for everyone" className="illustration-section-01 has-bottom-divider invertMobile topDivider imageFill" imageUrl = {headerImage}/> */}
+      <GenericSection>
+        <img src={seaBan} style = {{marginTop: "-70px", width: "80%", marginLeft: "auto", marginRight: "auto"}}alt="Logo" />
+      </GenericSection>
       <GenericSection style = {{display:"flex"}}>
         {/* <div style = {{float: "left"}}> */}
           <SideNavBar sideTitles = {array} />

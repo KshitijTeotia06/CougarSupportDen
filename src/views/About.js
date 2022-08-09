@@ -7,6 +7,7 @@ import Testimonial from '../components/sections/Testimonial';
 import Cta from '../components/sections/Cta';
 import SectionHeader from '../components/sections/partials/SectionHeader';
 import GenericSection from "../components/sections/GenericSection";
+import aboutBan from "../assets/banners/aboutBan.png";
 
 const headerData = {
     title: 'Section title',
@@ -17,9 +18,9 @@ const Home = () => {
 
   return (
     <GenericSection>
-        
-        <SectionHeader data={headerData} />
-        // Section content
+        <img src={aboutBan} style = {{marginTop: "-70px", width: "80%", marginLeft: "auto", marginRight: "auto"}}alt="Logo" />
+        {/* <SectionHeader data={headerData} /> */}
+        {/* // Section content */}
     </GenericSection>
   );
 }

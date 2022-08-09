@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <Hero className="illustration-section-01" />
-      <FeaturesTiles />
+      <FeaturesTiles className="center-content has-top-divider features-split-inner section-inner split-wrap container"/>
       <SectionHeader data={sectionHeader} className="center-content has-top-divider features-split-inner section-inner split-wrap container" />
       {/* <FeaturesSplit title = "test" description = "test" caption = "test" invertMobile topDivider imageFill className="illustration-section-02" imageUrl = "../assets/images/features-split-image-01.png" imageUrl = {featureImage}/> */}
       <Testimonial topDivider />

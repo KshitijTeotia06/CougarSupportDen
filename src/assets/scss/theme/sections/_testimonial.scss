@@ -27,7 +27,7 @@
     &.has-top-divider {
 
         &::before {
-            background: get-color(dark, 3);
+            background: "blue";
         }
     }
 }
